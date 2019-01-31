@@ -1,0 +1,29 @@
+<ion-content >
+  <ion-slides #Slider  [options]="sliderConfig"  >
+   
+
+    <ion-slide *ngFor="let item of Herois" >
+      <a ion-item href="" >
+      <img  src="{{item.img}}" >
+      
+      <ion-item class ="itemCentral" color="dark">
+      {{item.nome}} <br>
+             
+     </ion-item>
+     <ion-item class ="itemText" color="dark">
+             {{item.info}}
+     </ion-item>
+    </a>
+
+      
+    </ion-slide>
+
+    
+
+
+
+  </ion-slides>
+  <div class="swiper-button-next" (click)="slideNext()"></div>
+  <div class="swiper-button-prev" (click)="slidePrev()"></div>
+
+</ion-content>
